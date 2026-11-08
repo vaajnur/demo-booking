@@ -2,6 +2,8 @@
 
 Проверены методы `index`, `store`, `destroy` и `today` в `app/Http/Controllers/BookingController.php`, а также маршруты, модель `Booking` и миграция таблицы `bookings`.
 
+> Этот документ фиксирует результаты ревью исходного состояния до выполнения части 2. Ошибки создания и отмены брони устранены в `StoreBookingRequest` и `BookingController`; `index` и `today` не менялись, как и разрешено заданием.
+
 ## Проблемы
 
 ### Critical — SQL-инъекция при создании брони
