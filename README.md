@@ -53,8 +53,7 @@
 Нужны Docker и Docker Compose.
 
 ```sh
-docker compose up -d --wait
-docker compose exec app php artisan migrate:fresh --seed
+docker compose up -d --wait && docker compose exec -T app php artisan migrate:fresh --seed
 ```
 
 Первый запуск занимает несколько минут: контейнер устанавливает зависимости. API доступно по адресу `http://localhost:8000/api`.
@@ -62,7 +61,7 @@ docker compose exec app php artisan migrate:fresh --seed
 ## Тесты
 
 ```sh
-docker compose exec app php artisan test
+docker compose exec -T app php artisan test --compact
 ```
 
 Тесты идут на PostgreSQL в отдельной базе `testing`.
